@@ -1,0 +1,6 @@
+.terraform
+.env
+tfplan
+plano
+terraform.tfstate*
+.terraform.lock*
