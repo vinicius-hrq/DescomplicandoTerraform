@@ -16,5 +16,6 @@ terraform {
     bucket = "vinicius-hrq-terraform"
     key    = "terraform-test.tfstate"
     region = "us-east-1"
+    encrypt = true
   }
 }
