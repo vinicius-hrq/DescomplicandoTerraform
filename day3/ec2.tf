@@ -22,3 +22,15 @@ resource "aws_eip" "ip" {
   vpc = true
   instance = aws_instance.web.id
 }
+
+resource "aws_instance" "web2" {
+  ami           = data.aws_ami.ubuntu.id
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "HelloWorld"
+  }
+  depends_on = [
+    aws_instance.web
+  ]
+}
