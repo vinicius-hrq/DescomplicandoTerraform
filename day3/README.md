@@ -16,10 +16,34 @@ Listará todos os recursos e módulos no arquivo de estado:
 
 # 3 - taint / untaint
 Informa ao Terraform que um determintado objeto está degradado ou danificado. O comando `terraform taint` marca o objeto como `tainted` no arquivo de estado.
+
 Caso o objeto tenha sido marcado como `tainted` erroneamente, o comando `terraform untaint` pode ser usado para remover a marcação desse objeto.
 
 ![terraform taint / untaint.](images/terraform_taint_untaint.png "terraform taint / untaint.")
 
-
 [Command: taint](https://www.terraform.io/docs/cli/commands/taint.html)
+
 [Command: untaint](https://www.terraform.io/docs/cli/commands/untaint.html)
+
+# 4 - Graph
+Gera uma representação visual de uma configuração / plano de execução. A saída está no formato DOT, que pode ser usado pelo [GraphViz](http://www.graphviz.org/) para gerar gráficos.
+
+![terrafom graph.](images/terraform_graph.png "terraform graph.")
+
+A saída de `terraform graph` está no formato DOT, que pode ser convertido em uma imagem usando o `dot` fornecido pelo GraphViz:
+
+```$ terraform graph | dot -Tsvg > graph.svg```
+
+![graph.svg.](images/graph.svg "graph.svg.")
+
+[Command: graph](https://www.terraform.io/docs/cli/commands/graph.html)
+
+# 5 - fmt
+O `terraform fmt` é usado para reescrever os arquivos de configuração do Terraform, esse comando aplica as [Style Conventions](https://www.terraform.io/docs/language/syntax/style.html)
+
+![terraform_fmt.](images/terraform_fmt.png "terraform_fmt.")
+
+[Command: fmt](https://www.terraform.io/docs/cli/commands/fmt.html)
+
+# 6 - validate
+Valida os arquivos de configuração em um diretório, não acessando quaisquer serviços remotos como o state remoto e API's de Cloud Provider
