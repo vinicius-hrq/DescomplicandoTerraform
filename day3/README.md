@@ -30,7 +30,7 @@ Gera uma representação visual de uma configuração / plano de execução. A s
 
 ![terrafom graph.](images/terraform_graph.png "terraform graph.")
 
-A saída de `terraform graph` está no formato DOT, que pode ser convertido em uma imagem usando o `dot` fornecido pelo GraphViz:
+A saída do `terraform graph` está no formato DOT, que pode ser convertido em uma imagem usando o `dot` fornecido pelo GraphViz:
 
 ```$ terraform graph | dot -Tsvg > graph.svg```
 
@@ -46,4 +46,8 @@ O `terraform fmt` é usado para reescrever os arquivos de configuração do Terr
 [Command: fmt](https://www.terraform.io/docs/cli/commands/fmt.html)
 
 # 6 - validate
-Valida os arquivos de configuração em um diretório, não acessando quaisquer serviços remotos como o state remoto e API's de Cloud Provider
+Valida os arquivos de configuração em um diretório, não acessando quaisquer serviços remotos como o state remoto e API's de Cloud Provider. Verifica se uma configuração é sintaticamente válida e internamente consistente, independente de variáveis fornecidas ou estado existente.
+
+![terraform_validate.](images/terraform_validate.png "terraform_validate.")
+
+[Command: validate](https://www.terraform.io/docs/cli/commands/validate.html)
