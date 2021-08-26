@@ -6,6 +6,6 @@ Um operador é um tipo de expressão que transforma ou combina uma ou mais outra
 
 1. Cenário
 
-No arquivo `variable.tf` está contida a *variable* environment que por padrão é *production*. Em `ec2.tf` no argumento count, há um operador de igualdade que irá verificar se *var.environment* é igual a *production*, caso positivo, irá criar 2 instancias e caso negativo criará apenas 1. Ao executar o `terraform plan` é possível observar o resultado.
+No arquivo `variable.tf` está contida a [variable](https://www.terraform.io/docs/language/values/variables.html) *environment* que por padrão é *production*. Em `ec2.tf` no argumento count, há um operador de igualdade que irá verificar se *var.environment* é igual a *production*, caso positivo, irá criar 2 instancias e caso negativo criará apenas 1. Ao executar o `terraform plan` é possível observar o resultado.
 
 ![a.](images/terraform_plan_simple_operator.png)
