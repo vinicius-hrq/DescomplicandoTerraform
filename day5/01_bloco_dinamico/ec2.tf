@@ -18,7 +18,7 @@ resource "aws_instance" "web" {
     content {
       device_name = ebs_block_device.value["device_name"]
       volume_size = ebs_block_device.value["volume_size"]
-      volume_type = ebs_block_device.value["volume_type"] 
+      volume_type = ebs_block_device.value["volume_type"]
     }
   }
 
