@@ -14,6 +14,6 @@ resource "aws_instance" "web" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "HelloWorld %{ if var.name == "vinicius.hrq" }${var.name}%{ else }unnamed%{ endif }!"
+    Name = "HelloWorld %{if var.name == "vinicius.hrq"}${var.name}%{else}unnamed%{endif}!"
   }
 }
